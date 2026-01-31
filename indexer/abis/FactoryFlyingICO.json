@@ -1,0 +1,84 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "flyingIco",
+                "type": "address"
+            }
+        ],
+        "name": "Factory__FlyingIcoCreated",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "symbol",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokenCap",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokensPerUsd",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address[]",
+                "name": "acceptedAssets",
+                "type": "address[]"
+            },
+            {
+                "internalType": "address[]",
+                "name": "priceFeeds",
+                "type": "address[]"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "frequencies",
+                "type": "uint256[]"
+            },
+            {
+                "internalType": "address",
+                "name": "sequencer",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "treasury",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "vestingStart",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "vestingEnd",
+                "type": "uint256"
+            }
+        ],
+        "name": "createFlyingIco",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

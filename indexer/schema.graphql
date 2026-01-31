@@ -1,0 +1,59 @@
+type FactoryFlyingICO @entity(immutable: false) {
+  id: ID!
+  icoCount: BigInt!
+  icos: [FlyingICO!]! @derivedFrom(field: "factory")
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type FlyingICO @entity(immutable: false) {
+  id: ID!
+  factory: FactoryFlyingICO!
+
+  name: String!
+  symbol: String!
+  treasury: Bytes!
+  vestingStart: BigInt!
+  vestingEnd: BigInt!
+  tokenCap: BigInt!
+  tokensPerUsd: BigInt!
+
+  totalSupply: BigInt!
+
+  positions: [FlyingPosition!]! @derivedFrom(field: "ico")
+  acceptedAssets: [AcceptedAsset!]! @derivedFrom(field: "ico")
+  positionCount: BigInt!
+
+  createdAt: BigInt!
+  updatedAt: BigInt!
+}
+
+type FlyingPosition @entity(immutable: false) {
+  id: ID!
+  ico: FlyingICO!
+  positionId: BigInt!
+  user: Bytes!
+
+  assetAmount: BigInt!
+  tokenAmount: BigInt!
+  vestingAmount: BigInt!
+  asset: Bytes!
+
+  isClosed: Boolean!
+
+  createdAt: BigInt!
+  updatedAt: BigInt!
+}
+
+type AcceptedAsset @entity(immutable: false) {
+  id: ID!
+  ico: FlyingICO!
+  address: Bytes!
+
+  symbol: String!
+  decimals: BigInt!
+
+  createdAt: BigInt!
+  updatedAt: BigInt!
+}

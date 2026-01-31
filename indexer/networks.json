@@ -1,0 +1,11 @@
+{
+  "sepolia": {
+    "FactoryFlyingICO": {
+      "address": "0x4A9403D922D33422ac8d961dA9CCDbAa0031c327",
+      "startBlock": 9797827
+    },
+    "FlyingICO": {
+      "address": "0xB7390A123c1F8F2406EAF7BA86de3289E7B490A1"
+    }
+  }
+}
